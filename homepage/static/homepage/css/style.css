@@ -1,4 +1,14 @@
+body {
+  background-color: black;
+}
+
 .navbar-nav > li{
     margin-left:20px;
     margin-right:20px;
   }
+
+.my-form {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding:15px;
+}

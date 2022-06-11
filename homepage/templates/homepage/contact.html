@@ -5,24 +5,38 @@
 {% load crispy_forms_tags %}  
 
 <div>
-    <div class="container" style="padding:20px;">
-        <div class="row">
-            <div class="col">
-                <img src="{% static 'homepage/icons/github.svg' %}"/>
+    <div class="container-xl" style="padding:25px; max-width:800px; margin-bottom:20px; margin-top:20px;">
+        <div class="row ">
+            <div class="col text-center">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/github.svg' %}" class="my-icon"/>
+                </a>
             </div>
-            <div class="col">
-                <img src="{% static 'homepage/icons/instagram.svg' %}"/>
+            <div class="col text-center">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/instagram.svg' %}" class="my-icon"/>
+                </a>
             </div>
-            <div class="col">
-                <img src="{% static 'homepage/icons/mail.svg' %}"/>
+            <div class="col text-center">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/mail.svg' %}" class="my-icon"/>
+                </a>
             </div>
-            <div class="col">
-                <img src="{% static 'homepage/icons/linkedin.svg' %}"/>
+            <div class="col text-center ">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/linkedin.svg' %}" class="my-icon"/>
+                </a>
             </div>
         </div>
     </div>
 
-    <div class="container my-form" style="max-width:800px;">
+    <div class="container-fluid"> 
+        <div class="row justify-content-center">
+            Check out my socials above. Alternatively you can send me a message right here!
+        </div>
+    </div>
+
+    <div class="container my-form" >
         <form action="/submit_contact/" method="post" class="contact-form" >
             {% csrf_token %}
             <div class="row">

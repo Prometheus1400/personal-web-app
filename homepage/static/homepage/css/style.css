@@ -1,4 +1,27 @@
+body {
+  background-color: black;
+  color:white;
+}
+
 .navbar-nav > li{
     margin-left:20px;
     margin-right:20px;
-  }
+}
+
+.my-form {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.99);
+  padding:15px;
+  color:black;
+  max-width: 800px;
+  width: 95%;
+}
+
+.my-icon {
+  width: 25%;
+  max-width: 35px;
+}
+
+.my-icon:hover {
+    cursor: pointer;
+}

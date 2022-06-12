@@ -1,4 +1,6 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from . import forms
 
 def home(request):
     
@@ -16,3 +18,19 @@ def resume(request):
     
     context = {}
     return render(request, 'homepage/resume.html', context=context)
+
+
+def contact(request):
+    
+    context = {}
+    context['form'] = forms.contactForm()
+    return render(request, 'homepage/contact.html', context=context)
+
+def submit_contact(request):
+    try:
+        print(request)
+        return HttpResponseRedirect('/contact/')
+    except:
+        # TODO: add error path
+        return HttpResponseRedirect('/contact/')
+

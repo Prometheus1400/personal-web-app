@@ -1,0 +1,57 @@
+{% extends 'homepage/base.html' %}
+{% block content %}
+
+{% load static %}
+{% load crispy_forms_tags %}  
+
+<div>
+    <div class="container-xl" style="padding:25px; max-width:800px; margin-bottom:20px; margin-top:20px;">
+        <div class="row ">
+            <div class="col text-center">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/github.svg' %}" class="my-icon"/>
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/instagram.svg' %}" class="my-icon"/>
+                </a>
+            </div>
+            <div class="col text-center">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/mail.svg' %}" class="my-icon"/>
+                </a>
+            </div>
+            <div class="col text-center ">
+                <a href="https://www.google.com">
+                    <img src="{% static 'homepage/icons/linkedin.svg' %}" class="my-icon"/>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid"> 
+        <div class="row justify-content-center">
+            Check out my socials above. Alternatively you can send me a message right here!
+        </div>
+    </div>
+
+    <div class="container my-form" >
+        <form action="/submit_contact/" method="post" class="contact-form" >
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-lg">
+                {{ form.email|as_crispy_field }}
+                </div>
+                <div class="col-lg">
+                {{ form.organization|as_crispy_field }}
+                </div>
+            </div>
+            {{ form.message|as_crispy_field }}
+            {{ form.reason|as_crispy_field }}
+            <button class="btn btn-primary" type="submit" value="Submit"> Submit </button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

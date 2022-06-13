@@ -1,8 +1,10 @@
 {% extends 'homepage/base.html' %} 
 {% block content %}
+{% load static %}
 
 <div>
   Home Page
+  <img src="{% static 'homepage/headshot.jpg' %}" style="width:50%;"/>
 </div>
 
 {% endblock content %}

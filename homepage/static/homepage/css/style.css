@@ -25,3 +25,18 @@ body {
 .my-icon:hover {
     cursor: pointer;
 }
+
+h6 {
+  color: rgb(99, 202, 182);
+}
+
+h4 {
+  color: rgb(99, 202, 182);
+}
+
+a {
+  color : rgb(237, 141, 31);
+}
+a:hover {
+  color : rgb(175, 103, 21);
+}

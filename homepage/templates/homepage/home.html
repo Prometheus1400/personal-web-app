@@ -2,9 +2,29 @@
 {% block content %}
 {% load static %}
 
-<div>
-  Home Page
-  <img src="{% static 'homepage/headshot.jpg' %}" style="width:50%;"/>
+<div class="container-fluid justify-content-center" style="padding-top:10%; max-width: 800px;" >
+  <div class="row">
+    <div class="col" style="margin-bottom:40px;">
+      <img src="{% static 'homepage/headshot.jpeg' %}" alt="error loading image" class="img-fluid float-left" 
+        style="
+        border-radius:50%; 
+        clip-path:circle();
+        padding: 6px;
+        background-color: rgb(58, 60, 65);
+        border: 3px solid rgb(99, 202, 182);
+        height: auto;
+        width: 40%;
+        min-width: 200px;
+      "/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h6> HEY THERE,</h3>
+      <h2>I'm Kaleb.</h2>
+      <p>I am a computer science student at Texas A&M University with a strong passion for development. Welcome to my corner of the internet!</p>
+    </div>
+  </div>
 </div>
 
 {% endblock content %}

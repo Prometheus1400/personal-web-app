@@ -1,11 +1,21 @@
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from . import forms
+
+def home_redirect(request):
+    
+    return redirect('/home/')
 
 def home(request):
     
     context = {}
     return render(request, 'homepage/home.html', context=context)
+
+
+def about(request):
+    
+    context = {}
+    return render(request, 'homepage/about.html', context=context)
 
 
 def projects(request):

@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-nb6)%d8btp1_%ip20qrgqv^&t82wvh6u8*wabao&&k%oh!s1jl
 DEBUG = True
 
 ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = ['https://kaleb-dickerson.herokuapp.com']
 
 
 # Application definition

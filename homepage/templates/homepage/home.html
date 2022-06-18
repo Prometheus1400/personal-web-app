@@ -5,7 +5,8 @@
 <div class="container-fluid justify-content-center" style="padding-top:8vh; max-width: 800px;" >
   <div class="row">
     <div class="col" style="margin-bottom:40px;">
-      <img src="{% static 'homepage/headshot.jpeg' %}" alt="error loading image" class="img-fluid float-left" 
+      <img src="{% static 'homepage/headshot.jpeg' %}" alt="error loading image" 
+        class="img-fluid float-left animate__animated animate__fadeIn animate__slower" 
         style="
         border-radius:50%; 
         clip-path:circle();
@@ -13,19 +14,40 @@
         background-color: rgb(58, 60, 65);
         border: 3px solid rgb(99, 202, 182);
         height: auto;
-        width: 40%;
+        width: 50%;
         min-width: 200px;
       "/>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <h6> HEY THERE,</h3>
-      <h2>I'm Kaleb.</h2>
-      <p>I am a computer science student at Texas A&M University with a strong passion for software development. 
-        Welcome to my corner of the Internet!</p>
+      <h6 class="animate__animated animate__fadeInLeft"> HEY THERE,</h3>
+      <h2 class="animate__animated animate__fadeInLeft animate__slower">I'm Kaleb.</h2>
+      <p id="description"></p>
     </div>
   </div>
 </div>
+
+<script> 
+  var i = 0;
+  var txt = 'I am a computer science student at Texas A&M University with a strong passion for software development. Welcome to my corner of the Internet!'; /* The text */
+  var speed = 20; /* The speed/duration of the effect in milliseconds */
+
+  // 1 and 3 second animations means should wait for 3 seconds before animating typing
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  document.getElementById("description").innerHTML = ""
+  sleep(3100).then(function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("description").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  })
+
+  typeWriter()
+</script>
 
 {% endblock content %}
